@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.js"></script>
+  <title>Random Name Selector with Image</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+	    background-color: rgb(22, 28, 36);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+    }
+    #lucktext{
+      font-size: 2.7em;
+      background-color: #333d48;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      color: rgb(230, 172, 251);
+      background-color: #474660;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      transition: ease all 0.3s;
+    }
+    button:hover{
+      background-color: #604c7c;
+      transform: scale(1.01);
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+    #counter {
+      margin-top: 20px;
+	    margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #adadad;
+    }
+    #image {
+      border-radius: 10px;
+      display: none; /* Hidden initially */
+	    margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+	#box{
+		background-color: #333d48;
+		padding: 20px;
+		width: fit-content;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	}
+  #confetti{
+    background-color: rgb(22, 28, 36);
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+  }
+  </style>
+</head>
+<body>
+  <div id="confetti"></div>
+  <h1 id="lucktext">Test Your Luck!</h1>
+	<section id="box">
+	  <button id="randomButton">Get Random Card</button>
+	  <div id="result"></div>
+	  <div id="counter">Clicks: 0</div>
+	  <img id="image" src="" alt="Random Name Image">
+	<section>
+  <audio id="audio" volume="2" src="https://cdn.pixabay.com/download/audio/2024/06/22/audio_67de33d7b6.mp3?filename=winning-218995.mp3"></audio>
+	
+  <script src="script.js"></script>
+</body>
+</html>
